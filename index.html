@@ -69,8 +69,8 @@
     "O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha."<br />
     <strong>1 Coríntios 13:4</strong>
   </div>
-  <audio controls autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+ <audio autoplay loop>
+  <source src="https://example.com/the-walters-i-love-you-so.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
 
@@ -87,7 +87,8 @@
 
     const startDate = new Date("2024-12-02");
     const today = new Date();
-    const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+   const dataInicio = new Date("2023-12-02");
+
 
     flower.style.transform = "scale(1)";
     for (let i = 0; i < Math.min(petalsCount, daysPassed); i++) {
