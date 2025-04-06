@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flor do Nosso Amor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #cc3366;
+      margin-top: 20px;
+    }
+    .flower {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin-top: 40px;
+      transform: scale(0);
+      transition: transform 1s ease-in-out;
+    }
+    .petal {
+      width: 100px;
+      height: 100px;
+      background-color: #ff6699;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom center;
+    }
+    .center {
+      width: 40px;
+      height: 40px;
+      background-color: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    .verse {
+      margin-top: 30px;
+      font-style: italic;
+      text-align: center;
+      color: #555;
+      max-width: 80%;
+    }
+    audio {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flor do Nosso Amor</h1>
+  <div class="flower" id="flower"></div>
+  <div class="center"></div>
+  <div class="verse">
+    "O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha."<br />
+    <strong>1 Coríntios 13:4</strong>
+  </div>
+  <audio controls autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    const flower = document.getElementById('flower');
+    const petalsCount = 8;
+
+    function createPetal(angle) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.transform = \`translate(-50%, -100%) rotate(\${angle}deg)\`;
+      return petal;
+    }
+
+    const startDate = new Date("2024-12-02");
+    const today = new Date();
+    const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+
+    flower.style.transform = "scale(1)";
+    for (let i = 0; i < Math.min(petalsCount, daysPassed); i++) {
+      const angle = (360 / petalsCount) * i;
+      flower.appendChild(createPetal(angle));
+    }
+  </script>
+</body>
+</html>
