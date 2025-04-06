@@ -1,100 +1,59 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flor do Nosso Amor</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #ffe6f0, #fff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    h1 {
-      color: #cc3366;
-      margin-top: 20px;
-    }
-    .flower {
-      width: 200px;
-      height: 200px;
-      position: relative;
-      margin-top: 40px;
-      transform: scale(0);
-      transition: transform 1s ease-in-out;
-    }
-    .petal {
-      width: 100px;
-      height: 100px;
-      background-color: #ff6699;
-      border-radius: 50% 50% 0 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform-origin: bottom center;
-    }
-    .center {
-      width: 40px;
-      height: 40px;
-      background-color: yellow;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-    }
-    .verse {
-      margin-top: 30px;
-      font-style: italic;
-      text-align: center;
-      color: #555;
-      max-width: 80%;
-    }
-    audio {
-      margin-top: 30px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Flor do Nosso Amor</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 40px;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .flower {
+            width: 300px;
+            height: 300px;
+            margin: 40px auto;
+            background: radial-gradient(circle at center, pink 30%, deeppink 70%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+        audio {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Flor do Nosso Amor</h1>
-  <div class="flower" id="flower"></div>
-  <div class="center"></div>
-  <div class="verse">
-    "O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha."<br />
-    <strong>1 Coríntios 13:4</strong>
-  </div>
- <audio autoplay loop>
-  <source src="https://example.com/the-walters-i-love-you-so.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
+    <h1>🌸 Nosso Amor em Flor 🌸</h1>
+    <h2>Já se passaram 125 dias desde que começamos a namorar!</h2>
 
-  <script>
-    const flower = document.getElementById('flower');
-    const petalsCount = 8;
+    <div class="flower"></div>
 
-    function createPetal(angle) {
-      const petal = document.createElement('div');
-      petal.classList.add('petal');
-      petal.style.transform = \`translate(-50%, -100%) rotate(\${angle}deg)\`;
-      return petal;
-    }
-
-    const startDate = new Date("2024-12-02");
-    const today = new Date();
-   const dataInicio = new Date("2023-12-02");
-
-
-    flower.style.transform = "scale(1)";
-    for (let i = 0; i < Math.min(petalsCount, daysPassed); i++) {
-      const angle = (360 / petalsCount) * i;
-      flower.appendChild(createPetal(angle));
-    }
-  </script>
+    <p>Essa flor representa o nosso amor, que cresce e floresce a cada novo dia. Ela começou como uma sementinha em 2 de dezembro de 2024, e hoje já está linda e grandinha, assim como o que sentimos um pelo outro.</p>
+    
+    <p>Você é o presente mais lindo que Deus me deu. Forte, inteligente, gentil, e cheia de fé. O que construímos juntos é só o começo de uma linda jornada que Ele mesmo sonhou para nós.</p>
+    
+    <p><strong>"Acima de tudo, revistam-se do amor, que é o elo perfeito." – Colossenses 3:14</strong></p>
+    
+    <audio controls autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
 </body>
 </html>
+
